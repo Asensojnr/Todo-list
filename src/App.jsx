@@ -8,33 +8,45 @@ class App extends React.Component {
       {
         task: "Reasearch on Bently labs",
         time: "20:20",
-        completed: "false"
+        completed: false
       },
       {
         task: "Send email to Dr. Freddy Blay on the state of chrome",
         time: "17:00",
-        completed: "true"
+        completed: true
       },
       {
         task: "Play Fortnite",
         time: "16:30",
-        completed: "true"
+        completed: true
       },
       {
         task: "Prepare research on next artwork",
         time: "10:00",
-        completed: "false"
+        completed: false
       },
       {
         task: "send roses to Rosina Mensah,birthday",
         time: "05:00",
-        completed: "true"
+        completed: true
       }
     ]
   }
 
+  function({ completed }) {
+    if (!true) {
+      return completed;
+    }
+
+  }
+
+
 
   render() {
+
+
+
+
 
     return (
       <section className="section">
@@ -45,18 +57,18 @@ class App extends React.Component {
               <p className="title">Task</p>
               <ul>
                 {this.state.Todolist.map(t => (
-                  <li>{t.task}</li>
+                  <li>{t.task}<br /><p>{t.time}</p></li>
                 ))}
               </ul>
             </div>
-            <div className="column">
+            {/* <div className="column">
               <p className="title">Time</p>
               <ul>
                 {this.state.Todolist.map(t => (
                   <li>{t.time}</li>
                 ))}
               </ul>
-            </div>
+            </div> */}
 
 
             <div className="column">
